@@ -17,7 +17,7 @@ export default {
 			// api.github work and you can get the same stuff.
 			const response = await this.$axios.$get("https://api.github.com/repos/evamart/myschema-test/contents/myschema.json", {
 				headers: {
-					'Authorization': 'Bearer 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', // Personal access token HERE
+					'Authorization': 'Bearer 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', // Personal access token HERE
 					'Accept': 'application/vnd.github+json'
 				}
 			});
@@ -36,7 +36,7 @@ export default {
 
 		async getJSONSchema2({ commit }, params) {
 			const octokit = new Octokit({
-				auth: 'Bearer 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'
+				auth: 'Bearer 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'
 			});
 
 			const { data } = await octokit.rest.repos.getContent({
