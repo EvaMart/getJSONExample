@@ -1,5 +1,7 @@
 # Example with openEBench-nuxt
 
+![creenshot](Screenshot.jpeg)
+
 > :warning: Forked from [https://github.com/inab/openEBench-nuxt](https://github.com/inab/openEBench-nuxt)
 
 
