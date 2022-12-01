@@ -15,9 +15,9 @@ export default {
 		async getJSONSchema({ commit }, params) {
 			// URL is v3 github instead of raw.githubusercontent.com because it allows access tokens.
 			// api.github work and you can get the same stuff.
-			const response = await this.$axios.$get("https://api.github.com/repos/evamart/myschema-test/contents/myschema.raw", {
+			const response = await this.$axios.$get("https://api.github.com/repos/evamart/myschema-test/contents/myschema.json", {
 				headers: {
-					'Authorization': 'Bearer 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', // Personal access token HERE
+					'Authorization': 'Bearer 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', // Personal access token HERE
 					'Accept': 'application/vnd.github+json'
 				}
 			});
@@ -36,7 +36,7 @@ export default {
 
 		async getJSONSchema2({ commit }, params) {
 			const octokit = new Octokit({
-				auth: 'Bearer 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'
+				auth: 'Bearer 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'
 			});
 
 			const { data } = await octokit.rest.repos.getContent({
